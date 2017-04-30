@@ -1,0 +1,6 @@
+use_frameworks!
+target 'Vector_Tests' do
+  pod 'Vector', :path => '../'
+  
+  
+end
