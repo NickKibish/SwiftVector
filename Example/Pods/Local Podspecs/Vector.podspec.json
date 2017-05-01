@@ -1,0 +1,22 @@
+{
+  "name": "Vector",
+  "version": "0.1.0",
+  "summary": "A short description of Vector.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Nick Kibish/Vector",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Nick Kibish": "nick.kibish@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Nick Kibish/Vector.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Vector/**/*"
+}

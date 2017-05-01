@@ -1,0 +1,6 @@
+framework module Vector {
+  umbrella header "Vector-umbrella.h"
+
+  export *
+  module * { export * }
+}

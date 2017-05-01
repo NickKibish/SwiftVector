@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Vector/Classes/**/*'
+  s.source_files = 'Vector/**/*'
   
   # s.resource_bundles = {
   #   'Vector' => ['Vector/Assets/*.png']
