@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol Numeric: Equatable, Comparable {
+public protocol Numeric: Equatable, Comparable, CustomStringConvertible {
     
     static func +(lhs: Self, rhs: Self) -> Self
     
@@ -25,6 +25,10 @@ public protocol Numeric: Equatable, Comparable {
     static func *=(lhs: inout Self, rhs: Self)
     
     static func /=(lhs: inout Self, rhs: Self)
+    
+    prefix static func -(rhs: Self) -> Self
+    
+    prefix static func +(rhs: Self) -> Self
 }
 
 
@@ -34,12 +38,6 @@ extension Int8: Numeric { }
 extension Int16: Numeric { }
 extension Int32: Numeric { }
 extension Int64: Numeric { }
-
-extension UInt: Numeric { }
-extension UInt8: Numeric { }
-extension UInt16: Numeric { }
-extension UInt32: Numeric { }
-extension UInt64: Numeric { }
 
 extension Float: Numeric { }
 extension Float80: Numeric { }

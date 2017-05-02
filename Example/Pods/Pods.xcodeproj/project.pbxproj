@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0124945DA36B67695F7224E24D09286A /* Vector-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E44701F1663C89DA7373218EEB58F3B /* Vector-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6474D151699A967F5264F2D2B1930DA9 /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2D6AD3CD97000551A25DEE918B9FAE /* Numeric.swift */; };
-		7909465BA7A2908E16D6302BD0F57542 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7FB1CBB0F4804A9B6C5156C829A68 /* Vector.swift */; };
+		0124945DA36B67695F7224E24D09286A /* Vector-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4717CA9867B238E2EB93898577286A28 /* Vector-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		42242C2C458EED2048123F8BF96A278A /* Vector-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E6CAFE089CD9925173BB70630813C9 /* Vector-dummy.m */; };
+		5955403D693B3904DCAB25025FAB188D /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFBA61E6C4B8A31779565C094EC61B8 /* Numeric.swift */; };
 		7ECF16C00A2332578EBAFC05A5E3598D /* Pods-Vector_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ECD6DE3EEABF9ECE2B187953E426430A /* Pods-Vector_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		90A6048195FBE90C6B4782718C1E51C9 /* Vector-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07037FAD3357CD1D1B759F1A283E3E63 /* Vector-dummy.m */; };
+		8F5B34BDEF9B161D9936D3075D62A20E /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445DF1AB286870925B9E71AAB6A4C10E /* Errors.swift */; };
 		B6805B5D5AB92952067BC3BF7E3D450A /* Pods-Vector_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29252E00C8151A9673DFD85884CEBB65 /* Pods-Vector_Tests-dummy.m */; };
 		E20FB12B68EE7803163238797BC78CF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		E7D6D1ECDD254A00370A19DFB51FBC64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		EEA7E1D6D5BBCE4462A12DB65908CD21 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27323BBC9DB6B0E72AE6CE931140FD43 /* Vector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,28 +29,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07037FAD3357CD1D1B759F1A283E3E63 /* Vector-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Vector-dummy.m"; sourceTree = "<group>"; };
+		04BA07A7197E4658E685CBCE6C34DE46 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F926F75EBF34B41647151B9273E66FD /* Vector.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Vector.modulemap; sourceTree = "<group>"; };
 		180D0DB5CA95F8B71FA15668DF209A37 /* Pods_Vector_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Vector_Tests.framework; path = "Pods-Vector_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D03E2EC6C0EA1E526B9EE368F25D2B7 /* Vector-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Vector-prefix.pch"; sourceTree = "<group>"; };
 		2549BB5BDB76840ACF7A8793B2CB7D9D /* Pods-Vector_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Vector_Tests.modulemap"; sourceTree = "<group>"; };
+		27323BBC9DB6B0E72AE6CE931140FD43 /* Vector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
 		29252E00C8151A9673DFD85884CEBB65 /* Pods-Vector_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Vector_Tests-dummy.m"; sourceTree = "<group>"; };
+		3604B86666F777E7A9971432C59F2939 /* Vector.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Vector.xcconfig; sourceTree = "<group>"; };
 		364AA13CAEE0D6FF13791B8F18A241D2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41AD32766F24F7EC87AAEC1B6F73BFCD /* Vector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Vector.framework; path = Vector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		445DF1AB286870925B9E71AAB6A4C10E /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		4717CA9867B238E2EB93898577286A28 /* Vector-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Vector-umbrella.h"; sourceTree = "<group>"; };
 		527AC4C05FDF7416B79A057A236A0A01 /* Pods-Vector_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vector_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		5E44701F1663C89DA7373218EEB58F3B /* Vector-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Vector-umbrella.h"; sourceTree = "<group>"; };
-		5FCA116BC8D94A03F2869EAA6459D332 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E76D264DF28D130997D572BE08889A4 /* Vector-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Vector-prefix.pch"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		78D7EB1782C52719223F58792E810222 /* Pods-Vector_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vector_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		8291D1D3EEC68FC5CED5808B99F46D55 /* Vector.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Vector.modulemap; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DFBA61E6C4B8A31779565C094EC61B8 /* Numeric.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
 		A6AB42B43B22DF17B1AFDD3D3D86A48E /* Pods-Vector_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Vector_Tests-resources.sh"; sourceTree = "<group>"; };
-		B192219F6DA59A67DFDF663FCD205165 /* Vector.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Vector.xcconfig; sourceTree = "<group>"; };
 		B78DD514446112080702D6B6AE8FDC8B /* Pods-Vector_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vector_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C971FA896ADA2383EDB9C918998F8FA0 /* Pods-Vector_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Vector_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		CCD7FB1CBB0F4804A9B6C5156C829A68 /* Vector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
-		DF2D6AD3CD97000551A25DEE918B9FAE /* Numeric.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
 		E42CBAE047F4C832547F3B8ADDBEA041 /* Pods-Vector_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Vector_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		ECD6DE3EEABF9ECE2B187953E426430A /* Pods-Vector_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Vector_Tests-umbrella.h"; sourceTree = "<group>"; };
+		F2E6CAFE089CD9925173BB70630813C9 /* Vector-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Vector-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,28 +74,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1D4C43B8BF0D14621559C2E598A8001D /* Support Files */ = {
+		175E4B33B6B9EB81B8956ED965CB89EC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				5FCA116BC8D94A03F2869EAA6459D332 /* Info.plist */,
-				8291D1D3EEC68FC5CED5808B99F46D55 /* Vector.modulemap */,
-				B192219F6DA59A67DFDF663FCD205165 /* Vector.xcconfig */,
-				07037FAD3357CD1D1B759F1A283E3E63 /* Vector-dummy.m */,
-				1D03E2EC6C0EA1E526B9EE368F25D2B7 /* Vector-prefix.pch */,
-				5E44701F1663C89DA7373218EEB58F3B /* Vector-umbrella.h */,
+				9DFBA61E6C4B8A31779565C094EC61B8 /* Numeric.swift */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Vector";
+			name = Protocols;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
-		23FA9A27DCE4F411CEC482A7D10BAEF8 /* Vector */ = {
+		44036457141C1770F6CA124438B3F8F7 /* Vector */ = {
 			isa = PBXGroup;
 			children = (
-				1D4C43B8BF0D14621559C2E598A8001D /* Support Files */,
-				B863A157C6277C7D022BA0A8A486CEED /* Vector */,
+				4E0CF592550F92E076DDCDE2A418461E /* Classes */,
+				BB23A1A4C934988286D35C2557A44453 /* Enums */,
+				175E4B33B6B9EB81B8956ED965CB89EC /* Protocols */,
 			);
 			name = Vector;
-			path = ../..;
+			path = Vector;
+			sourceTree = "<group>";
+		};
+		4E0CF592550F92E076DDCDE2A418461E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				27323BBC9DB6B0E72AE6CE931140FD43 /* Vector.swift */,
+			);
+			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		6AAF18FF2E5F3966C528F63C24DFC04D /* Products */ = {
@@ -108,7 +115,7 @@
 		74BD28BDAC052C66DDE2DE29D8FE8D6B /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				23FA9A27DCE4F411CEC482A7D10BAEF8 /* Vector */,
+				E5595B6233F0BFEBC3814C7862605AE5 /* Vector */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -132,23 +139,13 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		B863A157C6277C7D022BA0A8A486CEED /* Vector */ = {
+		BB23A1A4C934988286D35C2557A44453 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				BB2DD9898DA9C62287E381B61C9BD075 /* Classes */,
-				E3CCBDE1CA63D4887B2D840BC64FA776 /* Protocols */,
+				445DF1AB286870925B9E71AAB6A4C10E /* Errors.swift */,
 			);
-			name = Vector;
-			path = Vector;
-			sourceTree = "<group>";
-		};
-		BB2DD9898DA9C62287E381B61C9BD075 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				CCD7FB1CBB0F4804A9B6C5156C829A68 /* Vector.swift */,
-			);
-			name = Classes;
-			path = Classes;
+			name = Enums;
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -185,13 +182,28 @@
 			path = "Target Support Files/Pods-Vector_Tests";
 			sourceTree = "<group>";
 		};
-		E3CCBDE1CA63D4887B2D840BC64FA776 /* Protocols */ = {
+		DB41049C32F0C1E4ACF98C192DA6B052 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DF2D6AD3CD97000551A25DEE918B9FAE /* Numeric.swift */,
+				04BA07A7197E4658E685CBCE6C34DE46 /* Info.plist */,
+				0F926F75EBF34B41647151B9273E66FD /* Vector.modulemap */,
+				3604B86666F777E7A9971432C59F2939 /* Vector.xcconfig */,
+				F2E6CAFE089CD9925173BB70630813C9 /* Vector-dummy.m */,
+				5E76D264DF28D130997D572BE08889A4 /* Vector-prefix.pch */,
+				4717CA9867B238E2EB93898577286A28 /* Vector-umbrella.h */,
 			);
-			name = Protocols;
-			path = Protocols;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Vector";
+			sourceTree = "<group>";
+		};
+		E5595B6233F0BFEBC3814C7862605AE5 /* Vector */ = {
+			isa = PBXGroup;
+			children = (
+				DB41049C32F0C1E4ACF98C192DA6B052 /* Support Files */,
+				44036457141C1770F6CA124438B3F8F7 /* Vector */,
+			);
+			name = Vector;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +232,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C0A352E7CDCDF7366956784AF9A8FA1 /* Build configuration list for PBXNativeTarget "Vector" */;
 			buildPhases = (
-				E1E31BB0015F795F432F6B1739E56316 /* Sources */,
+				76D8EA2200DEA6E5342662CBBA26EEEA /* Sources */,
 				4C5661EED93A295BD28150E0E9034378 /* Frameworks */,
 				80D5965F907AFF16943CAC234795B15A /* Headers */,
 			);
@@ -287,13 +299,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1E31BB0015F795F432F6B1739E56316 /* Sources */ = {
+		76D8EA2200DEA6E5342662CBBA26EEEA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6474D151699A967F5264F2D2B1930DA9 /* Numeric.swift in Sources */,
-				90A6048195FBE90C6B4782718C1E51C9 /* Vector-dummy.m in Sources */,
-				7909465BA7A2908E16D6302BD0F57542 /* Vector.swift in Sources */,
+				8F5B34BDEF9B161D9936D3075D62A20E /* Errors.swift in Sources */,
+				5955403D693B3904DCAB25025FAB188D /* Numeric.swift in Sources */,
+				42242C2C458EED2048123F8BF96A278A /* Vector-dummy.m in Sources */,
+				EEA7E1D6D5BBCE4462A12DB65908CD21 /* Vector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +493,7 @@
 		};
 		A4A49C68B3852AC8D559ED86C6DC8648 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B192219F6DA59A67DFDF663FCD205165 /* Vector.xcconfig */;
+			baseConfigurationReference = 3604B86666F777E7A9971432C59F2939 /* Vector.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -514,7 +527,7 @@
 		};
 		BC82013CD568DED8F1DFB4D4B1BD413F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B192219F6DA59A67DFDF663FCD205165 /* Vector.xcconfig */;
+			baseConfigurationReference = 3604B86666F777E7A9971432C59F2939 /* Vector.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

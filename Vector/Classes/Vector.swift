@@ -8,12 +8,20 @@
 
 import Foundation
 
-public struct Vector <T: Numeric> {
+enum AdditionSign {
+    case plus, minus
+}
+
+public struct Vector <T: Numeric> : ExpressibleByArrayLiteral {
     public typealias Element = T
     fileprivate var elements: [Element]
     
     public init(dimension: Int, repeatValue: Element) {
         self.elements = Array<Element>(repeating: repeatValue, count: dimension)
+    }
+    
+    public init(arrayLiteral elements: Vector.Element...) {
+        self.elements = elements
     }
     
     public init(elements: [Element]) {
@@ -35,6 +43,47 @@ public struct Vector <T: Numeric> {
     }
 }
 
+extension Vector: Equatable {
+    public static func ==(lhs: Vector, rhs: Vector) -> Bool {
+        return lhs.elements == rhs.elements
+    }
+}
+
 extension Vector {
+    fileprivate mutating func add(vector: Vector, sign: AdditionSign) throws {
+        if self.dimension != vector.dimension {
+            throw VectorError.differentDimensions
+        }
+        
+        for (index, element) in self.elements.enumerated() {
+            let val = sign == .plus ? element : -element
+            self[index] += val
+        }
+    }
     
+    fileprivate static func add(lhs: Vector, rhs: Vector, sign: AdditionSign) throws -> Vector {
+        var vector = lhs
+        try vector.add(vector: rhs, sign: sign)
+        return vector
+    }
+}
+
+infix operator +: AdditionPrecedence
+public func  + <T: Numeric> (lhs: Vector<T>, rhs: Vector<T>) throws -> Vector<T>  {
+    return try Vector<T>.add(lhs: lhs, rhs: rhs, sign: .plus)
+}
+
+infix operator -: AdditionPrecedence
+public func  - <T: Numeric> (lhs: Vector<T>, rhs: Vector<T>) throws -> Vector<T>  {
+    return try Vector<T>.add(lhs: lhs, rhs: rhs, sign: .minus)
+}
+
+infix operator +=: AdditionPrecedence
+public func += <T: Numeric> (lhs: inout Vector<T>, rhs: Vector<T>) throws  {
+    try lhs.add(vector: rhs, sign: .plus)
+}
+
+infix operator -=: AdditionPrecedence
+public func -= <T: Numeric> (lhs: inout Vector<T>, rhs: Vector<T>) throws  {
+    try lhs.add(vector: rhs, sign: .minus)
 }
