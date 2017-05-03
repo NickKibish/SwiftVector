@@ -50,12 +50,16 @@ extension Vector: Equatable {
 }
 
 extension Vector {
-    fileprivate mutating func add(vector: Vector, sign: AdditionSign) throws {
-        if self.dimension != vector.dimension {
+    fileprivate static func throwDimension(left: Vector, right: Vector) throws {
+        if left.dimension != right.dimension {
             throw VectorError.differentDimensions
         }
+    }
+    
+    fileprivate mutating func add(vector: Vector, sign: AdditionSign) throws {
+        try Vector.throwDimension(left: self, right: vector)
         
-        for (index, element) in self.elements.enumerated() {
+        for (index, element) in elements.enumerated() {
             let val = sign == .plus ? element : -element
             self[index] += val
         }
@@ -65,6 +69,17 @@ extension Vector {
         var vector = lhs
         try vector.add(vector: rhs, sign: sign)
         return vector
+    }
+    
+    fileprivate static func multiply(left: Vector, right: Vector) throws -> Element  {
+        try throwDimension(left: left, right: right)
+        
+        var result: Element = 0
+        for (index, element) in left.elements.enumerated() {
+            result += right[index] * element
+        }
+        
+        return result
     }
 }
 
@@ -87,3 +102,9 @@ infix operator --=: AdditionPrecedence
 public func --= <T: Numeric> (lhs: inout Vector<T>, rhs: Vector<T>) throws  {
     try lhs.add(vector: rhs, sign: .minus)
 }
+
+infix operator *: MultiplicationPrecedence
+public func * <T: Numeric> (lhs: Vector<T>, rhs: Vector<T>) throws -> T {
+    return try Vector<T>.multiply(left: lhs, right: rhs)
+}
+

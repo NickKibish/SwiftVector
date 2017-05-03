@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol Numeric: Equatable, Comparable, CustomStringConvertible {
+public protocol Numeric: Equatable, Comparable, CustomStringConvertible, ExpressibleByIntegerLiteral {
     
     static func +(lhs: Self, rhs: Self) -> Self
     

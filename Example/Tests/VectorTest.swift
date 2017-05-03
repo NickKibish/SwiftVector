@@ -158,4 +158,28 @@ class VectorTest: XCTestCase {
         
         XCTFail()
     }
+    
+    func testScalarDot() {
+        let vec1: Vector = [1, 2, 3]
+        let vec2: Vector = [1, 2, 3]
+        
+        do {
+            let scalarDot = try vec1 * vec2
+            XCTAssertEqual(scalarDot, 14)
+        } catch let error {
+            XCTFail(error.localizedDescription)
+        }
+        
+        let vec4: Vector = [1, 2, 3, 4]
+        do {
+            let _ = try vec1 * vec4
+        } catch let error as VectorError {
+            XCTAssertTrue(error == .differentDimensions)
+            return
+        } catch let error {
+            XCTFail(error.localizedDescription)
+        }
+        
+        XCTFail()
+    }
 }
