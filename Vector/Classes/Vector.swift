@@ -78,12 +78,12 @@ public func  - <T: Numeric> (lhs: Vector<T>, rhs: Vector<T>) throws -> Vector<T>
     return try Vector<T>.add(lhs: lhs, rhs: rhs, sign: .minus)
 }
 
-infix operator +=: AdditionPrecedence
-public func += <T: Numeric> (lhs: inout Vector<T>, rhs: Vector<T>) throws  {
+infix operator ++=: AdditionPrecedence
+public func ++= <T: Numeric> (lhs: inout Vector<T>, rhs: Vector<T>) throws  {
     try lhs.add(vector: rhs, sign: .plus)
 }
 
-infix operator -=: AdditionPrecedence
-public func -= <T: Numeric> (lhs: inout Vector<T>, rhs: Vector<T>) throws  {
+infix operator --=: AdditionPrecedence
+public func --= <T: Numeric> (lhs: inout Vector<T>, rhs: Vector<T>) throws  {
     try lhs.add(vector: rhs, sign: .minus)
 }
