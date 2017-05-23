@@ -89,6 +89,11 @@ extension Vector where Element: NumericArithmeticType {
         
         return result
     }
+    
+    fileprivate static func multiply(left: Vector, right: Vector) -> Vector  {
+        
+        return left
+    }
 }
 
 infix operator +: AdditionPrecedence
@@ -103,13 +108,11 @@ public func  - <T: NumericArithmeticType> (lhs: Vector<T>, rhs: Vector<T>) -> Ve
     return Vector<T>.add(lhs: lhs, rhs: rhs, sign: .minus)
 }
 
-//infix operator +=: AdditionPrecedence
 public func += <T: NumericArithmeticType> (lhs: inout Vector<T>, rhs: Vector<T>)  {
     assert(lhs.dimension == rhs.dimension, "Cannot add vectors of different dimensions")
     lhs.add(vector: rhs, sign: .plus)
 }
 
-//infix operator -=: AdditionPrecedence
 public func -= <T: NumericArithmeticType> (lhs: inout Vector<T>, rhs: Vector<T>)  {
     assert(lhs.dimension == rhs.dimension, "Cannot subract vectors of different dimensions")
     lhs.add(vector: rhs, sign: .minus)
@@ -117,7 +120,12 @@ public func -= <T: NumericArithmeticType> (lhs: inout Vector<T>, rhs: Vector<T>)
 
 infix operator *: MultiplicationPrecedence
 public func * <T: NumericArithmeticType> (lhs: Vector<T>, rhs: Vector<T>) -> T {
-    assert(lhs.dimension == rhs.dimension, "Cannot add vectors of different dimensions")
+    assert(lhs.dimension == rhs.dimension, "Cannot multiply vectors of different dimensions")
     return Vector<T>.multiply(left: lhs, right: rhs)
 }
 
+infix operator **: MultiplicationPrecedence
+public func ** <T: NumericArithmeticType> (lhs: Vector<T>, rhs: Vector<T>) -> Vector<T> {
+    assert(lhs.dimension == rhs.dimension, "Cannot multiply vectors of different dimensions")
+    return Vector<T>.multiply(left: lhs, right: rhs)
+}
