@@ -8,38 +8,35 @@
 
 import Foundation
 
-public protocol Numeric: Equatable, Comparable, CustomStringConvertible, ExpressibleByIntegerLiteral {
-    
+public protocol NumericArithmeticType: ExpressibleByIntegerLiteral, Equatable {
     static func +(lhs: Self, rhs: Self) -> Self
-    
     static func -(lhs: Self, rhs: Self) -> Self
-    
     static func *(lhs: Self, rhs: Self) -> Self
-    
     static func /(lhs: Self, rhs: Self) -> Self
     
-    static func +=(lhs: inout Self, rhs: Self)
-    
-    static func -=(lhs: inout Self, rhs: Self)
-    
-    static func *=(lhs: inout Self, rhs: Self)
-    
-    static func /=(lhs: inout Self, rhs: Self)
-    
-    prefix static func -(rhs: Self) -> Self
-    
-    prefix static func +(rhs: Self) -> Self
+    static func +=( lhs: inout Self, rhs: Self)
+    static func -=( lhs: inout Self, rhs: Self)
+    static func *=( lhs: inout Self, rhs: Self)
+    static func /=( lhs: inout Self, rhs: Self)
 }
 
+extension Int8   : SignedNumericArithmeticType { }
+extension Int16  : SignedNumericArithmeticType { }
+extension Int32  : SignedNumericArithmeticType { }
+extension Int64  : SignedNumericArithmeticType { }
+extension Int    : SignedNumericArithmeticType { }
+extension UInt8  : NumericArithmeticType { }
+extension UInt16 : NumericArithmeticType { }
+extension UInt32 : NumericArithmeticType { }
+extension UInt64 : NumericArithmeticType { }
+extension UInt   : NumericArithmeticType { }
 
+protocol FloatingPointArithmeticType : SignedNumericArithmeticType, ExpressibleByFloatLiteral { }
 
-extension Int: Numeric { }
-extension Int8: Numeric { }
-extension Int16: Numeric { }
-extension Int32: Numeric { }
-extension Int64: Numeric { }
+protocol SignedNumericArithmeticType: NumericArithmeticType {
+    prefix static func -(value: Self) -> Self
+}
 
-extension Float: Numeric { }
-extension Float80: Numeric { }
-
-extension Double: Numeric { }
+extension Float32 : FloatingPointArithmeticType { }
+extension Float64 : FloatingPointArithmeticType { }
+extension Float80 : FloatingPointArithmeticType { }

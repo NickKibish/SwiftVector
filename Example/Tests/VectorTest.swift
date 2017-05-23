@@ -54,6 +54,7 @@ class VectorTest: XCTestCase {
         
         XCTAssertNotEqual(vec3, vec4)
         
+        
         let vec6: Vector<Int> = [1, 2, 3, 5]
         let vec7: Vector<Int> = [1, 2, 3, 4]
         
@@ -65,73 +66,24 @@ class VectorTest: XCTestCase {
         let vec1: Vector = [1, 2, 3]
         let vec2: Vector = [1, 2, 3]
         let vec3: Vector = [2, 4, 6]
-        do {
-            let resultVector = try vec1 + vec2
-            XCTAssertEqual(vec3, resultVector)
-        } catch let error as VectorError {
-            XCTFail(error.description)
-        } catch let error {
-            XCTFail(error.localizedDescription)
-        }
         
-        let vec4: Vector = [1, 2, 3, 4]
-        do {
-            let _ = try vec1 + vec4
-        } catch let error as VectorError {
-            XCTAssertTrue(error == .differentDimensions)
-            return
-        } catch let error {
-            XCTFail(error.localizedDescription)
-        }
-        XCTFail()
+        XCTAssertEqual(vec1 + vec2, vec3)
     }
     
     func testSubtraction() {
         let vec1: Vector = [1, 2, 3]
         let vec2: Vector = [1, 2, 3]
-        let vec3: Vector = [2, 4, 6]
-        do {
-            let resultVector = try vec1 + vec2
-            XCTAssertEqual(vec3, resultVector)
-        } catch let error {
-            XCTFail(error.localizedDescription)
-        }
+        let vec3: Vector = [0, 0, 0]
         
-        let vec4: Vector = [1, 2, 3, 4]
-        do {
-            let _ = try vec1 + vec4
-        } catch let error as VectorError {
-            XCTAssertTrue(error == .differentDimensions)
-            return
-        } catch let error {
-            XCTFail(error.localizedDescription)
-        }
-        XCTFail()
+        XCTAssertEqual(vec1 - vec2, vec3)
     }
     
     func testUnarAppending() {
         var vec1: Vector = [1, 2, 3]
         let vec2: Vector = [1, 2, 3]
         let vec3: Vector = [2, 4, 6]
-        
-        do {
-            try vec1 ++= vec2
-            XCTAssertEqual(vec1, vec3)
-        } catch let error {
-            XCTFail(error.localizedDescription)
-        }
-        
-        let vec4: Vector = [1, 2, 3, 4]
-        do {
-            try vec1 ++= vec4
-        } catch let error as VectorError {
-            XCTAssertTrue(error == .differentDimensions)
-            return
-        } catch let error {
-            XCTFail(error.localizedDescription)
-        }
-        
-        XCTFail()
+        vec1 += vec2
+        XCTAssertEqual(vec1, vec3)
     }
     
     func testUnarSubtraction() {
@@ -139,47 +91,15 @@ class VectorTest: XCTestCase {
         let vec2: Vector = [1, 2, 3]
         let vec3: Vector = [0, 0, 0]
         
-        do {
-            try vec1 --= vec2
-            XCTAssertEqual(vec1, vec3)
-        } catch let error {
-            XCTFail(error.localizedDescription)
-        }
-        
-        let vec4: Vector = [1, 2, 3, 4]
-        do {
-            try vec1 --= vec4
-        } catch let error as VectorError {
-            XCTAssertTrue(error == .differentDimensions)
-            return
-        } catch let error {
-            XCTFail(error.localizedDescription)
-        }
-        
-        XCTFail()
+        vec1 -= vec2
+        XCTAssertEqual(vec1, vec3)
     }
     
     func testScalarDot() {
         let vec1: Vector = [1, 2, 3]
         let vec2: Vector = [1, 2, 3]
         
-        do {
-            let scalarDot = try vec1 * vec2
-            XCTAssertEqual(scalarDot, 14)
-        } catch let error {
-            XCTFail(error.localizedDescription)
-        }
-        
-        let vec4: Vector = [1, 2, 3, 4]
-        do {
-            let _ = try vec1 * vec4
-        } catch let error as VectorError {
-            XCTAssertTrue(error == .differentDimensions)
-            return
-        } catch let error {
-            XCTFail(error.localizedDescription)
-        }
-        
-        XCTFail()
+        let scalarDot = vec1 * vec2
+        XCTAssertEqual(scalarDot, 14)
     }
 }

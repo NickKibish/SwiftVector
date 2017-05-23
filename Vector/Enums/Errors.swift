@@ -9,12 +9,12 @@
 import Foundation
 
 enum VectorError: Error, CustomStringConvertible {
-    case differentDimensions
+    case unexpectedError
     
     var description: String {
         switch self {
-        case .differentDimensions:
-            return "Dimension of provided vectors are different"
+        case .unexpectedError:
+            return "Unexpected error was occured"
         }
     }
     
