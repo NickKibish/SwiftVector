@@ -12,7 +12,7 @@ enum AdditionSign {
     case plus, minus
 }
 
-public struct Vector <T: Equatable> : ExpressibleByArrayLiteral {
+public struct Vector <T: Equatable> : Vectorable {
     public typealias Element = T
     fileprivate var elements: [Element]
     
@@ -57,11 +57,13 @@ extension Vector: Equatable {
     }
 }
 
+/*
 extension Vector where Element: NumericArithmeticType {
     public static func ==(lhs: Vector, rhs: Vector) -> Bool {
         return lhs.elements == rhs.elements
     }
 }
+*/
 
 extension Vector where Element: NumericArithmeticType {
     fileprivate mutating func add(vector: Vector, sign: AdditionSign) {
