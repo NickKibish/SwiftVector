@@ -54,7 +54,6 @@ class VectorTest: XCTestCase {
         
         XCTAssertNotEqual(vec3, vec4)
         
-        
         let vec6: Vector<Int> = [1, 2, 3, 5]
         let vec7: Vector<Int> = [1, 2, 3, 4]
         
@@ -99,7 +98,7 @@ class VectorTest: XCTestCase {
         let vec1: Vector = [1, 2, 3]
         let vec2: Vector = [1, 2, 3]
         
-        let scalarDot = vec1 * vec2
+        let scalarDot: Int = vec1 * vec2
         XCTAssertEqual(scalarDot, 14)
     }
 }

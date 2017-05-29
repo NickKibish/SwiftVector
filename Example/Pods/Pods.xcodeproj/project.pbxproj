@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0124945DA36B67695F7224E24D09286A /* Vector-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4717CA9867B238E2EB93898577286A28 /* Vector-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		36D93F77AC660B58DBA6999ECEC6B106 /* Vectorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A2EE8C391FFF8544B9224CF726FF3B /* Vectorable.swift */; };
+		36D93F77AC660B58DBA6999ECEC6B106 /* VectorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A2EE8C391FFF8544B9224CF726FF3B /* VectorType.swift */; };
 		37FB0C10EEE423A78FA431AD11E10A60 /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15436F6DFEB8A7C542D0C5551C5CA808 /* Numeric.swift */; };
 		462E295500DF25BA2C7CDC95F5A0992D /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0BED0C4B4081C42A4E9172A60B187B /* Vector.swift */; };
 		5D0C59CDAF6B147D418C62300806FBF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
@@ -31,23 +31,23 @@
 
 /* Begin PBXFileReference section */
 		04BA07A7197E4658E685CBCE6C34DE46 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0F926F75EBF34B41647151B9273E66FD /* Vector.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Vector.modulemap; sourceTree = "<group>"; };
+		0F926F75EBF34B41647151B9273E66FD /* Vector.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Vector.modulemap; sourceTree = "<group>"; };
 		15436F6DFEB8A7C542D0C5551C5CA808 /* Numeric.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
-		180D0DB5CA95F8B71FA15668DF209A37 /* Pods_Vector_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Vector_Tests.framework; path = "Pods-Vector_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2549BB5BDB76840ACF7A8793B2CB7D9D /* Pods-Vector_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Vector_Tests.modulemap"; sourceTree = "<group>"; };
+		180D0DB5CA95F8B71FA15668DF209A37 /* Pods_Vector_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vector_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2549BB5BDB76840ACF7A8793B2CB7D9D /* Pods-Vector_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Vector_Tests.modulemap"; sourceTree = "<group>"; };
 		29252E00C8151A9673DFD85884CEBB65 /* Pods-Vector_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Vector_Tests-dummy.m"; sourceTree = "<group>"; };
 		3604B86666F777E7A9971432C59F2939 /* Vector.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Vector.xcconfig; sourceTree = "<group>"; };
 		364AA13CAEE0D6FF13791B8F18A241D2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		41AD32766F24F7EC87AAEC1B6F73BFCD /* Vector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Vector.framework; path = Vector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41AD32766F24F7EC87AAEC1B6F73BFCD /* Vector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4717CA9867B238E2EB93898577286A28 /* Vector-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Vector-umbrella.h"; sourceTree = "<group>"; };
 		527AC4C05FDF7416B79A057A236A0A01 /* Pods-Vector_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vector_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E76D264DF28D130997D572BE08889A4 /* Vector-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Vector-prefix.pch"; sourceTree = "<group>"; };
 		6802514A0B7B6FD2E7A723AD845CFBAE /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		78D7EB1782C52719223F58792E810222 /* Pods-Vector_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vector_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A6AB42B43B22DF17B1AFDD3D3D86A48E /* Pods-Vector_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Vector_Tests-resources.sh"; sourceTree = "<group>"; };
 		B78DD514446112080702D6B6AE8FDC8B /* Pods-Vector_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vector_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C1A2EE8C391FFF8544B9224CF726FF3B /* Vectorable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Vectorable.swift; sourceTree = "<group>"; };
+		C1A2EE8C391FFF8544B9224CF726FF3B /* VectorType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VectorType.swift; sourceTree = "<group>"; };
 		C971FA896ADA2383EDB9C918998F8FA0 /* Pods-Vector_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Vector_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E42CBAE047F4C832547F3B8ADDBEA041 /* Pods-Vector_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Vector_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -80,9 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				15436F6DFEB8A7C542D0C5551C5CA808 /* Numeric.swift */,
-				C1A2EE8C391FFF8544B9224CF726FF3B /* Vectorable.swift */,
+				C1A2EE8C391FFF8544B9224CF726FF3B /* VectorType.swift */,
 			);
-			name = Protocols;
 			path = Protocols;
 			sourceTree = "<group>";
 		};
@@ -100,7 +99,6 @@
 			children = (
 				6802514A0B7B6FD2E7A723AD845CFBAE /* Errors.swift */,
 			);
-			name = Enums;
 			path = Enums;
 			sourceTree = "<group>";
 		};
@@ -144,7 +142,6 @@
 			children = (
 				EF0BED0C4B4081C42A4E9172A60B187B /* Vector.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -155,7 +152,6 @@
 				738A9709B08FB37EB656BC730343C0DE /* Enums */,
 				607B92ADD8E90DBE56B5E3622B8DAD6F /* Protocols */,
 			);
-			name = Vector;
 			path = Vector;
 			sourceTree = "<group>";
 		};
@@ -310,7 +306,7 @@
 				37FB0C10EEE423A78FA431AD11E10A60 /* Numeric.swift in Sources */,
 				720EE869BAD80C8FF67593503F095007 /* Vector-dummy.m in Sources */,
 				462E295500DF25BA2C7CDC95F5A0992D /* Vector.swift in Sources */,
-				36D93F77AC660B58DBA6999ECEC6B106 /* Vectorable.swift in Sources */,
+				36D93F77AC660B58DBA6999ECEC6B106 /* VectorType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
