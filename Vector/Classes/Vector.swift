@@ -30,9 +30,11 @@ public struct Vector <T: Equatable> : VectorType, Equatable {
     
     public subscript (index: Int) -> Element {
         get {
+            precondition(index < dimension && index >= 0, "Index out of range")
             return elements[index]
         }
         set (newValue) {
+            precondition(index < dimension && index >= 0, "Index out of range")
             elements[index] = newValue 
         }
     }

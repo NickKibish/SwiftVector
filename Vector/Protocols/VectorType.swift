@@ -76,38 +76,38 @@ extension VectorType where Element: NumericArithmeticType {
     //MARK: Pubsic methods
     
     static func +(lhs: Self, rhs: Self) -> Self {
-        assert(lhs.dimension == rhs.dimension, "Cannot add vectors of different dimensions")
+        precondition(lhs.dimension == rhs.dimension, "Cannot add vectors of different dimensions")
         return add(lhs: lhs, rhs: rhs, sign: .plus)
     }
     
     static func -(lhs: Self, rhs: Self) -> Self {
-        assert(lhs.dimension == rhs.dimension, "Cannot subract vectors of different dimensions")
+        precondition(lhs.dimension == rhs.dimension, "Cannot subract vectors of different dimensions")
         return add(lhs: lhs, rhs: rhs, sign: .minus)
     }
     
     static func +=( lhs: inout Self, rhs: Self) {
-        assert(lhs.dimension == rhs.dimension, "Cannot add vectors of different dimensions")
+        precondition(lhs.dimension == rhs.dimension, "Cannot add vectors of different dimensions")
         lhs.add(other: rhs, sign: .plus)
     }
     
     static func -=( lhs: inout Self, rhs: Self) {
-        assert(lhs.dimension == rhs.dimension, "Cannot subract vectors of different dimensions")
+        precondition(lhs.dimension == rhs.dimension, "Cannot subract vectors of different dimensions")
         lhs.add(other: rhs, sign: .minus)
     }
     
     static func *(lhs: Self, rhs: Self) -> Element {
-        assert(lhs.dimension == rhs.dimension, "Cannot multiply vectors of different dimensions")
+        precondition(lhs.dimension == rhs.dimension, "Cannot multiply vectors of different dimensions")
         return multiply(lhs: lhs, rhs: rhs)
     }
     
     static func *(lhs: Self, rhs: Self) -> Self {
-        assert(lhs.dimension == rhs.dimension, "Cannot multiply vectors of different dimensions")
+        precondition(lhs.dimension == rhs.dimension, "Cannot multiply vectors of different dimensions")
         return multiply(lhs: lhs, rhs: rhs)
     }
     
     /*
      public func ** <T: NumericArithmeticType> (lhs: Vector<T>, rhs: Vector<T>) -> Vector<T> {
-     assert(lhs.dimension == rhs.dimension, "Cannot multiply vectors of different dimensions")
+     precondition(lhs.dimension == rhs.dimension, "Cannot multiply vectors of different dimensions")
      return Vector<T>.multiply(left: lhs, right: rhs)
      }
  */
